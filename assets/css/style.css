@@ -1,36 +1,41 @@
 * {box-sizing: border-box}
 
 /* Add padding to containers */
-.container-fluid {
-  padding: 16px;
+.container {
+padding: 1px 5px; 
+width: 30%;
+margin: auto;
+border: 2px solid  #f1f1f1;
+;
 }
 
 /* Full-width input fields */
-input[type=text], input[type=number], textarea {
+input[type=text], input[type=number],  input[type=password] ,textarea {
   width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
+  padding: 7px;
+  margin: 5px 0px 5px 0px;
+  display: block;
+  border: 0.5px solid  #a8a4a4;
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=number], textarea:focus {
+input[type=text]:focus, input[type=number], input[type=password],textarea:focus {
   background-color: #ddd;
   outline: none;
 }
 
 /* Overwrite default styles of hr */
 hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+  border: 2px solid #f1f1f1;
+  width: 100%;
+
 }
 
 /* Set a style for the submit/register button */
-.submitbtn {
+.submitbtn , .loginbtn {
   background-color: #4CAF50;
   color: white;
-  padding: 16px 20px;
+  padding:10px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
@@ -43,12 +48,14 @@ hr {
 }
 
 /* Add a blue text color to links */
-/* a {
+ a {
   color: dodgerblue;
-} */
+}
 
 /* Set a grey background color and center the text of the "sign in" section */
-/* .signin {
+.signin {
   background-color: #f1f1f1;
   text-align: center;
-} */
+} 
+
+

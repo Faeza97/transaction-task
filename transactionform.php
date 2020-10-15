@@ -1,17 +1,6 @@
 <?php
-require_once('dbconfig.php');
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Transaction data PHP </title>
-</head>
-<body>
-<div>
-  <?php
+require_once('C:\xampp\htdocs\first-task\configuration\dbconfig.php');
+
   if(isset($_POST['submit'])) {
   $name             = $_POST['name'];
   $email            = $_POST['email'];
@@ -33,11 +22,18 @@ require_once('dbconfig.php');
   // echo $name , " " , $email , " " ,  $mobile , " " , $address , " " , $amount, " " , $comment;
  }
   ?>
-</div>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Transaction data PHP </title>
+</head>
+<body>
   <div>
-  <form action="transaction.php" method="post">
-  <div class="container-fluid">
+  <form action="transactionform.php" method="post">
+  <div class="container">
   <h1>Transaction Form</h1>
     <p>Please fill in this form to Pay</p>
     <hr>
@@ -57,14 +53,13 @@ require_once('dbconfig.php');
     <input type="number" placeholder="Amount" name="amount" id="amount" required>
 
     <label for="comment"><b>Comments</b></label>
-    <textarea rows="7" cols="50" placeholder="Comments" name="comment" id="comment" ></textarea>
+    <textarea rows="4" cols="50" placeholder="Comments" name="comment" id="comment" ></textarea>
 
     <button type="submit" name="submit" class="submitbtn">Submit</button>
   </div>
-
-  <!-- <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
-  </div> -->
+  <div class="container signin">
+    <p>Already have an account? <a href="login.php">Log in</a>.</p>
+  </div>
   </form>
   </div>
 </body>
