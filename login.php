@@ -27,7 +27,7 @@ if(isset($_POST["login"]))
           {  
                $message = '<label>Wrong Data</label>';            }  
      }  
-}    
+}
 ?>  
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +51,6 @@ if(isset($_POST["login"]))
     <hr>
     <label for="name"><b>Username</b></label>
     <input type="text" placeholder="Type Your Username" name="username" id="username" >
-
     <label for="Password"><b>Password</b></label>
     <input type="password" placeholder="Type your Password" name="password" id="password" >
     <button type="submit" name="login" class="loginbtn">Login</button>

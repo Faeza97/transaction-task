@@ -57,6 +57,7 @@ require_once('C:\xampp\htdocs\first-task\configuration\dbconfig.php');
 
     <button type="submit" name="submit" class="submitbtn">Submit</button>
   </div>
+  
   <div class="container signin">
     <p>Already have an account? <a href="login.php">Log in</a>.</p>
   </div>
