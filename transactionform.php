@@ -1,6 +1,6 @@
 <?php
-require_once('C:\xampp\htdocs\first-task\configuration\dbconfig.php');
-
+	session_start();
+include('configuration/dbconfig.php');
   if(isset($_POST['submit'])) {
   $name             = $_POST['name'];
   $email            = $_POST['email'];
@@ -10,18 +10,16 @@ require_once('C:\xampp\htdocs\first-task\configuration\dbconfig.php');
   $comment          = $_POST['comment'];
 
   $sql = "INSERT INTO transaction (name , email , mobile , address , amount , comment) VALUES (?,?,?,?,?,?)";
-  $stmtinsert = $db->prepare($sql);
-  // $names = array($name , $email , $mobile , $address , $amount , $comment);
-  // $result = $stmtinsert->execute($names);
+  $stmtinsert = $dbconnection->conn->prepare($sql);
   $result = $stmtinsert->execute([$name , $email , $mobile , $address , $amount , $comment]);
   if($result){
     echo "Successfully saved in the db";
   } else{
     echo "error while saving it in the db";
   }
-  // echo $name , " " , $email , " " ,  $mobile , " " , $address , " " , $amount, " " , $comment;
  }
-  ?>
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

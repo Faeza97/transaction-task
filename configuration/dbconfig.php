@@ -1,15 +1,18 @@
 <?php 
-$db_user = "root";
-$db_pass = "";
-$db_name = "fastpay-transaction";
-$message = "";
+class DbConnection{
+    private $DATABASE_HOST = 'localhost';
+    private $DATABASE_USER = 'root';
+    private $DATABASE_PASS = '';
+    private $DATABASE_NAME = 'fastpay-transaction';
+    public $conn;
 
-try{
-$db = new PDO('mysql:host=localhost;dbname=' . $db_name . ';charset=utf8', $db_user, $db_pass);
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} 
-catch(PDOException $error)  
-{  
-     $message = $error->getMessage();  
-}  
+    public function __construct(){
+        try {
+            $this->conn = new PDO('mysql:host=' . $this->DATABASE_HOST . ';dbname=' . $this->DATABASE_NAME . ';charset=utf8', $this->DATABASE_USER, $this->DATABASE_PASS);
+        } catch (PDOException $exception) {
+            exit('Failed to connect to database!');
+        }
+    }
+}
+$dbconnection = new DbConnection();
 ?>
