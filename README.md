@@ -1,4 +1,4 @@
-# transaction-task
+# transaction-task //PHP-PDO and mysql
 
 **Create a database with the name of (fastpay-transaction).
 create 2 table in it, 1 for transaction details and the other one for the userlogin details.
