@@ -34,7 +34,6 @@ if (isset ($_POST['name'])  && isset($_POST['email']) ){
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Admin Panel</title>
     <link rel="stylesheet" href="assets/css/style.css" />

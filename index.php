@@ -1,6 +1,7 @@
 <?php  
 session_start();  
 include('configuration/dbconfig.php');
+
 //login code
 $sql = 'SELECT *  FROM transaction';
 $q = $dbconnection->conn->query($sql);

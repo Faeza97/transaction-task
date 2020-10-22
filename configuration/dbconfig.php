@@ -13,6 +13,7 @@ class DbConnection{
             exit('Failed to connect to database!');
         }
     }
+    
 }
 $dbconnection = new DbConnection();
 ?>
