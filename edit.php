@@ -1,7 +1,6 @@
 <?php
 session_start();  
 include('configuration/dbconfig.php');
-
 $id = $_GET['edit'];
 $sql = 'SELECT * FROM transaction WHERE id=:id';
 $statement = $dbconnection->conn->prepare($sql);
@@ -74,8 +73,8 @@ if (isset ($_POST['name'])  && isset($_POST['email']) ){
                 </div>
                 <div class="form-group">
                     <label for="comment"><b>Comments</b></label>
-                    <textarea rows="4" cols="50" placeholder="Comments" name="comment" id="comment" class="form-control"
-                        value="<?= $person->comment; ?>"></textarea>
+                    <textarea rows="4" cols="50" name="comment" id="comment"
+                        class="form-control"><?= $person->comment; ?></textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-info">Update</button>
