@@ -84,6 +84,4 @@ if (isset ($_POST['name'])  && isset($_POST['email']) ){
     </div>
     </div>
 </body>
-</div>
-
 </html>
